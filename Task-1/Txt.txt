@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatur's Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            padding: 1em;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+
+        .content {
+            padding: 2em;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .content.active {
+            display: block;
+            opacity: 1;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 0.5em;
+        }
+
+        .social-icons {
+            margin: 1em 0;
+        }
+
+        .social-icons img {
+            width: 80px; /* Increased size */
+            height: 80px; /* Ensure circle shape */
+            border-radius: 50%;
+            margin: 0 15px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .skills, .education {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .skills div, .education div {
+            background-color: #fff;
+            padding: 1em;
+            margin: 1em;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex: 1 1 calc(33% - 2em);
+            box-sizing: border-box;
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .skills div:hover, .education div:hover {
+            transform: translateY(-10px);
+        }
+
+        .skills img, .education img {
+            width: 100px; /* Increased size */
+            height: 100px; /* Ensure circle shape */
+            border-radius: 50%;
+            margin-bottom: 0.5em;
+            object-fit: cover; /* Ensure image fits within the circle */
+        }
+
+        footer p {
+            margin: 0;
+            padding: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home" class="nav-link" data-target="home">Home</a>
+        <a href="#skills" class="nav-link" data-target="skills">Skills</a>
+        <a href="#education" class="nav-link" data-target="education">Education</a>
+    </nav>
+
+    <div id="home" class="content active">
+        <header>
+            <h1>Hi, It's Chatur</h1>
+            <h2>I'm a Web Developer</h2>
+        </header>
+        <main>
+            <h3>Hello! I'm Chaturvyuha, a dedicated and passionate web developer with a strong foundation in creating dynamic and responsive websites. With expertise in HTML, CSS, JavaScript, and Node.js, I bring innovative solutions to life through clean and efficient code. My journey in web development began with a curiosity for technology and a drive to solve complex problems creatively. Over the years, I've honed my skills through various projects, from simple static websites to complex web applications. I thrive in collaborative environments and am always eager to learn new technologies and techniques. My goal is to build user-friendly and accessible web experiences that not only meet but exceed client expectations. Whether I'm working on a personal project or a professional assignment, I approach every challenge with enthusiasm and a commitment to excellence. Outside of coding, I enjoy exploring the latest tech trends, contributing to open-source projects, and engaging with the developer community. Let's create something amazing together!</h3>
+        </main>
+    </div>
+
+    <div id="skills" class="content">
+        <header>
+            <h1>Skills</h1>
+        </header>
+        <main class="skills">
+            <div data-url="https://en.wikipedia.org/wiki/HTML">
+                <img src="C:\Users\chatu\Downloads\html.png" alt="HTML">
+                <h2>HTML</h2>
+            </div>
+            <div data-url="https://en.wikipedia.org/wiki/CSS">
+                <img src="C:\Users\chatu\Downloads\css-3.png" alt="CSS">
+                <h2>CSS</h2>
+            </div>
+            <div data-url="https://en.wikipedia.org/wiki/JavaScript">
+                <img src="C:\Users\chatu\Downloads\js.png"alt="JavaScript">
+                <h2>JavaScript</h2>
+            </div>
+            <div data-url="https://en.wikipedia.org/wiki/C_(programming_language)">
+                <img src="C:\Users\chatu\Downloads\C logo_processed.png" alt="C">
+                <h2>C</h2>
+            </div>
+            <div data-url="https://en.wikipedia.org/wiki/C%2B%2B">
+                <img src="C:\Users\chatu\Downloads\C++ logo_processed.png" alt="C++">
+                <h2>C++</h2>
+            </div>
+        </main>
+    </div>
+
+    <div id="education" class="content">
+        <header>
+            <h1>Education</h1>
+        </header>
+        <main class="education">
+            <div>
+                <h2>(2022-2026)</h2>
+                <h3>Ramachandra College Of Engineering</h3>
+                <p>Bachelor of Technology</p>
+            </div>
+            <div>
+                <h2>(2020-2022)</h2>
+                <h3>Sri Chaitanya College</h3>
+                <p>High School Diploma</p>
+            </div>
+            <div>
+                <h2>(2020)</h2>
+                <h3>Oxford Public School</h3>
+                <p>Secondary School</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/"><img src="C:\Users\chatu\Downloads\github.png" alt="GitHub"></a>
+            <a href="https://linkedin.com/"><img src="C:\Users\chatu\Downloads\linkedin.png" alt="LinkedIn"></a>
+            <a href="https://facebook.com/"><img src="C:\Users\chatu\Downloads\facebook.png" alt="Facebook"></a>
+            <a href="https://instagram.com/"><img src="C:\Users\chatu\Downloads\instagram (1).png" alt="Instagram"></a>
+        </div>
+        <p>All rights reserved &copy; 2024</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.content').forEach(section => {
+                    section.classList.remove('active');
+                });
+                const target = this.getAttribute('data-target');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.skills div').forEach(skill => {
+            skill.addEventListener('click', function() {
+                const url = this.getAttribute('data-url');
+                window.open(url, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
