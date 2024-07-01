@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatur's Webpage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            padding: 1em;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+
+        .content {
+            padding: 2em;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .content.active {
+            display: block;
+            opacity: 1;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 0.5em;
+        }
+
+        .social-icons {
+            margin: 1em 0;
+        }
+
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .skills, .education {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .skills div, .education div {
+            background-color: #fff;
+            padding: 1em;
+            margin: 1em;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex: 1 1 calc(33% - 2em);
+            box-sizing: border-box;
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .skills div:hover, .education div:hover {
+            transform: translateY(-10px);
+        }
+
+        .skills img, .education img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 0.5em;
+            object-fit: cover;
+        }
+
+        footer p {
+            margin: 0;
+            padding: 1em 0;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 0.5em 0;
+            }
+            .skills div, .education div {
+                flex: 1 1 100%;
+            }
+            .social-icons img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        /* Tablet Styles */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .skills div, .education div {
+                flex: 1 1 calc(50% - 2em);
+            }
+            .social-icons img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2em;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.75em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.75em 1.5em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #1260CC;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home" class="nav-link" data-target="home">Home</a>
+        <a href="#skills" class="nav-link" data-target="skills">Skills</a>
+        <a href="#education" class="nav-link" data-target="education">Education</a>
+        <a href="#contact" class="nav-link" data-target="contact">Contact</a>
+    </nav>
+
+    <div id="home" class="content active">
+        <header>
+            <h1>Hi, It's Chatur</h1>
+            <h2>I'm a Web Developer</h2>
+        </header>
+        <main>
+            <h3>Hello! I'm Chaturvyuha, a dedicated and passionate web developer with a strong foundation in creating dynamic and responsive websites. With expertise in HTML, CSS, JavaScript, and Node.js, I bring innovative solutions to life through clean and efficient code. My journey in web development began with a curiosity for technology and a drive to solve complex problems creatively. Over the years, I've honed my skills through various projects, from simple static websites to complex web applications. I thrive in collaborative environments and am always eager to learn new technologies and techniques. My goal is to build user-friendly and accessible web experiences that not only meet but exceed client expectations. Whether I'm working on a personal project or a professional assignment, I approach every challenge with enthusiasm and a commitment to excellence. Outside of coding, I enjoy exploring the latest tech trends, contributing to open-source projects, and engaging with the developer community. Let's create something amazing together!</h3>
+        </main>
+    </div>
+
+    <div id="skills" class="content">
+        <header>
+            <h1>Skills</h1>
+        </header>
+        <main class="skills">
+            <div data-url="https://en.wikipedia.org/wiki/HTML">
+                <img src="https://banner2.cleanpng.com/20190125/wpj/kisspng-computer-icons-html5-scalable-vector-graphics-port-socialpack-chocolate-icon-5c4b3bbcb7d671.680718971548434364753.jpg" alt="HTML">
+                <h2>HTML</h2>
+            </div>
+            <div data-url="https://en.wikipedia.org/wiki/CSS">
+                <img src="https://w7.pngwing.com/pngs/696/424/png-transparent-logo-css-css3-thumbnail.png" alt="CSS">
+                <h2>CSS</h2>
+            </div>
+            <div data-url="https://en.wikipedia.org/wiki/JavaScript">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+                <h2>JavaScript</h2>
+            </div>
+            <div data-url="https://en.wikipedia.org/wiki/C_(programming_language)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C">
+                <h2>C</h2>
+            </div>
+            <div data-url="https://en.wikipedia.org/wiki/C%2B%2B">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/306px-ISO_C%2B%2B_Logo.svg.png" alt="C++">
+                <h2>C++</h2>
+            </div>
+        </main>
+    </div>
+
+    <div id="education" class="content">
+        <header>
+            <h1>Education</h1>
+        </header>
+        <main class="education">
+            <div>
+                <h2>(2022-2026)</h2>
+                <h3>Ramachandra College Of Engineering</h3>
+                <p>Bachelor of Technology</p>
+            </div>
+            <div>
+                <h2>(2020-2022)</h2>
+                <h3>Sri Chaitanya College</h3>
+                <p>High School Diploma</p>
+            </div>
+            <div>
+                <h2>(2020)</h2>
+                <h3>Oxford Public School</h3>
+                <p>Secondary School</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- New Contact Section -->
+    <div id="contact" class="content">
+        <header>
+            <h1>Contact Me</h1>
+        </header>
+        <main>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" rows="5" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-info">Submit</button>
+            </form>
+            <div class="social-icons">
+                      <a href="https://github.com/"><img src="https://as2.ftcdn.net/v2/jpg/02/50/30/59/1000_F_250305943_sDC6la1N1fDl3bLgfLxOkQwItIodsdMb.jpg" alt="GitHub"></a>
+            <a href="https://linkedin.com/"><img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151299455.jpg?t=st=1719053825~exp=1719057425~hmac=2733a5598d5d12d439f5c2dd29f916666c3683e7d63ca49080731bc142039816&w=740"alt="LinkedIn"></a>
+            <a href="https://facebook.com/"><img src="https://img.freepik.com/premium-photo/facebook-logo-round-button-icon-with-empty-background-3d_272306-348.jpg?w=826" alt="Facebook"></a>
+            <a href="https://instagram.com/"><img src="https://img.freepik.com/free-psd/instagram-application-logo_23-2151544096.jpg?t=st=1719052966~exp=1719056566~hmac=8564071432416d302bc0bf946630e80c7f8e23cd8dcf73ce5dc79e2570831456&w=740" alt="Instagram"></a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Chaturvyuha</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Navigation Interactivity
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.content').forEach(section => {
+                    section.classList.remove('active');
+                });
+                const target = this.getAttribute('data-target');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+
+        // Skills Click Interactivity
+        document.querySelectorAll('.skills div').forEach(skill => {
+            skill.addEventListener('click', function() {
+                const url = this.getAttribute('data-url');
+                window.open(url, '_blank');
+            });
+        });
+
+        // Form Validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Basic form validation
+            if (name === '' || email === '' || message === '') {
+                alert('All fields are required.');
+                return;
+            }
+
+            // Simple email format check
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            alert('Form submitted successfully!');
+            document.getElementById('contactForm').reset();
+        });
+
+        // Prevent XSS Attacks
+        function sanitizeInput(input) {
+            return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+    </script>
+</body>
+</html>
